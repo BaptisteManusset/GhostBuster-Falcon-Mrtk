@@ -7,6 +7,7 @@ using Valve.VR;
 [RequireComponent(typeof(SteamVR_TrackedObject))]
 public class GunController : MonoBehaviour
 {
+    public Image image;
 
     public SteamVR_Action_Boolean spawn = SteamVR_Input.GetAction<SteamVR_Action_Boolean>("InteractUI");
 
@@ -24,7 +25,6 @@ public class GunController : MonoBehaviour
     public GameObject raycast;
 
 
-    public Image image;
 
 
     private void Awake()
