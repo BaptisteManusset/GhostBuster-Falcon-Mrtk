@@ -34,41 +34,43 @@ public class GunController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (ControlGachette())
-        {
-            if (canShot)
-            {
+        //if (ControlGachette())
+        //{
+        //    if (canShot)
+        //    {
 
 
 
-                load += loadDecrease;
+        //        load += loadDecrease;
 
-                load = Mathf.Max(load, 0);
+        //        load = Mathf.Max(load, 0);
 
-                if(load <= 0)
-                    canShot = false;
-            }
-        } else
-        {
-            if (load < loadMax)
-            {
-                load += loadIncrease;
-            }
+        //        if(load <= 0)
+        //            canShot = false;
+        //    }
+        //} else
+        //{
+        //    if (load < loadMax)
+        //    {
+        //        load += loadIncrease;
+        //    }
 
-        }
+        //}
 
 
-        if (load >= loadMax)
-        {
-            load = Mathf.Min(load, loadMax);
-            canShot = true;
-        }
+        //if (load >= loadMax)
+        //{
+        //    load = Mathf.Min(load, loadMax);
+        //    canShot = true;
+        //}
 
+
+        canShot = ControlGachette();
 
 
 
         raycast.SetActive(canShot);
-        image.fillAmount = load / loadMax;
+        //image.fillAmount = load / loadMax;
 
 
 

@@ -154,6 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e0912ff0f4944cab150cc67528b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPhysic: 0
+  enablePhysic: 0
   k: 0.25
   mass: 1
   device_scale: {x: 1, y: 1, z: 1}
@@ -161,7 +163,6 @@ MonoBehaviour:
   linearFactors: {x: 1, y: 1, z: 1}
   angularFactors: {x: 1, y: 1, z: 1}
   friction: 1
-  enablePhysic: 0
 --- !u!23 &228413367
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -337,6 +338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e0912ff0f4944cab150cc67528b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPhysic: 0
+  enablePhysic: 0
   k: 0.25
   mass: 10
   device_scale: {x: 1, y: 1, z: 1}
@@ -344,7 +347,6 @@ MonoBehaviour:
   linearFactors: {x: 1, y: 1, z: 1}
   angularFactors: {x: 1, y: 1, z: 1}
   friction: 1
-  enablePhysic: 0
 --- !u!23 &954879636
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -427,7 +429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1061518346
 Transform:
   m_ObjectHideFlags: 0
@@ -623,7 +625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1138312145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -699,6 +701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e0912ff0f4944cab150cc67528b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPhysic: 0
+  enablePhysic: 0
   k: 0.2
   mass: 0
   device_scale: {x: 1, y: 1, z: 1}
@@ -706,7 +710,6 @@ MonoBehaviour:
   linearFactors: {x: 1, y: 1, z: 1}
   angularFactors: {x: 1, y: 1, z: 1}
   friction: 0.8
-  enablePhysic: 0
 --- !u!114 &1138312150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,6 +784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e0912ff0f4944cab150cc67528b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPhysic: 0
+  enablePhysic: 0
   k: 0.25
   mass: 5
   device_scale: {x: 1, y: 1, z: 1}
@@ -788,7 +793,6 @@ MonoBehaviour:
   linearFactors: {x: 1, y: 1, z: 1}
   angularFactors: {x: 1, y: 1, z: 1}
   friction: 1
-  enablePhysic: 0
 --- !u!23 &1208270247
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -947,6 +951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e0912ff0f4944cab150cc67528b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPhysic: 0
+  enablePhysic: 0
   k: 0.35
   mass: 0
   device_scale: {x: 1, y: 1, z: 1}
@@ -954,7 +960,6 @@ MonoBehaviour:
   linearFactors: {x: 1, y: 1, z: 1}
   angularFactors: {x: 1, y: 1, z: 1}
   friction: 0.1
-  enablePhysic: 0
 --- !u!1 &1413204113
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,7 +1031,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1035,8 +1040,8 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
+  m_TargetDisplay: 1
+  m_TargetEye: 0
   m_HDR: 1
   m_AllowMSAA: 1
   m_ForceIntoRT: 0
@@ -1062,7 +1067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1744792076
 Transform:
   m_ObjectHideFlags: 0
@@ -1138,6 +1143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e0912ff0f4944cab150cc67528b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPhysic: 0
+  enablePhysic: 0
   k: 0.01
   mass: 0
   device_scale: {x: 1, y: 1, z: 1}
@@ -1145,7 +1152,6 @@ MonoBehaviour:
   linearFactors: {x: 1, y: 1, z: 1}
   angularFactors: {x: 1, y: 1, z: 1}
   friction: 1
-  enablePhysic: 0
 --- !u!1 &1851864001 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 52925aea55b22e942bc50b7558584eda, type: 2}
@@ -1272,6 +1278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e0912ff0f4944cab150cc67528b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPhysic: 0
+  enablePhysic: 0
   k: 0.25
   mass: 1
   device_scale: {x: 1, y: 1, z: 1}
@@ -1279,7 +1287,6 @@ MonoBehaviour:
   linearFactors: {x: 1, y: 1, z: 1}
   angularFactors: {x: 1, y: 1, z: 1}
   friction: 1
-  enablePhysic: 0
 --- !u!1 &2072663159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8e0912ff0f4944cab150cc67528b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultPhysic: 0
+  enablePhysic: 0
   k: 0.25
   mass: 1
   device_scale: {x: 1, y: 1, z: 1}
@@ -1333,7 +1342,6 @@ MonoBehaviour:
   linearFactors: {x: 1, y: 1, z: 1}
   angularFactors: {x: 1, y: 1, z: 1}
   friction: 1
-  enablePhysic: 0
 --- !u!23 &2072663162
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1480,7 +1488,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2080708818
 Transform:
   m_ObjectHideFlags: 0

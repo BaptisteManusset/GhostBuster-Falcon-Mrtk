@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public bool isStart = false;
     public bool isGameover = false;
+    public bool isTuto = false;
 
 
     [Space(30)]
@@ -49,9 +50,16 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void Tutorial()
+    {
+        isTuto = true;
+        Time.timeScale = 1;
+
+    }
+
     public void Play()
     {
-        Time.timeScale = 1;
+        isTuto = false;
         isStart = true;
         isGameover = false;
         time = 0;
