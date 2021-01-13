@@ -13,8 +13,8 @@ public class SphereManipulator : MonoBehaviour
     public Transform godObject;
     public float godObjectMass;
 
-    private float minDistToMaxForce = 0.0005f;
-    private float maxDistToMaxForce = 0.009f;
+    public float minDistToMaxForce = 0.0005f;
+    public float maxDistToMaxForce = 0.009f;
     public float hapticTipToWorldScale;
 
     private float savedHapticTipToWorldScale;
@@ -43,7 +43,6 @@ public class SphereManipulator : MonoBehaviour
         //FalconUnityCall.updateHapticTransform(falcon_num, Vector3.up, Quaternion.identity, Vector3.one, useMotionCompensator, 1/60);
     }
 
-    [ContextMenu("Change Position")]
     public void ChangePosition()
     {
         savedHapticTipToWorldScale = hapticTipToWorldScale;
@@ -158,13 +157,16 @@ public class SphereManipulator : MonoBehaviour
         switch (i)
         {
             case 0:
+                if (CalibrationPlacement.instance) if (CalibrationPlacement.instance.enabletestNextStep) CalibrationPlacement.instance.FalconValidate();
                 break;
             case 1:
+
                 break;
             case 2:
 
                 break;
             case 3:
+
                 break;
 
         }

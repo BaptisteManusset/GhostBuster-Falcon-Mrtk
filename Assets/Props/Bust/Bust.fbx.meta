@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d4c1b0d10c8b9d04891150a96386ac28
-timeCreated: 1610012180
+guid: b0e69bcd266d6e24cadeca9f2e01295e
+timeCreated: 1610552045
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: table_final
+    4300000: Bust___Safari_Hunter_with_Hard_Brim_Hat1
   materials:
     importMaterials: 0
     materialName: 0
@@ -42,8 +42,8 @@ ModelImporter:
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1

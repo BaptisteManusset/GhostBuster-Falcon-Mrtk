@@ -11,6 +11,7 @@ public class GhostGrabber : MonoBehaviour
     [SerializeField] float timeBeforeGrab = 50;
     [SerializeField] float timeBeforeGrabMax = 100;
     public CanvasGroup canvas;
+    public float scoreDecrease = -1;
 
     private void Awake()
     {
@@ -37,6 +38,8 @@ public class GhostGrabber : MonoBehaviour
         {
             timeBeforeGrab = timeBeforeGrabMax;
             canvas.alpha = 0;
+
+            GameManager.instance.AddScore(scoreDecrease) ;
         }
     }
 

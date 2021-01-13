@@ -15,14 +15,13 @@ public class GunController : MonoBehaviour
     public bool gachettePressed;
 
 
-    public float loadMax = 100;
-    public float load = 0;
-    public float loadIncrease = 10;
-    public float loadDecrease = -10;
-
     public bool canShot = true;
 
     public GameObject raycast;
+
+    [Header("Start delay")]
+    public bool locked = true;
+    public float delay = 1;
 
 
 
@@ -30,50 +29,23 @@ public class GunController : MonoBehaviour
     private void Awake()
     {
         trackedObj = GetComponent<SteamVR_Behaviour_Pose>();
+
+        Invoke("Unlock", delay);
+
+    }
+
+    void Unlock()
+    {
+        locked = false;
     }
 
     private void FixedUpdate()
     {
-        //if (ControlGachette())
-        //{
-        //    if (canShot)
-        //    {
-
-
-
-        //        load += loadDecrease;
-
-        //        load = Mathf.Max(load, 0);
-
-        //        if(load <= 0)
-        //            canShot = false;
-        //    }
-        //} else
-        //{
-        //    if (load < loadMax)
-        //    {
-        //        load += loadIncrease;
-        //    }
-
-        //}
-
-
-        //if (load >= loadMax)
-        //{
-        //    load = Mathf.Min(load, loadMax);
-        //    canShot = true;
-        //}
-
-
-        canShot = ControlGachette();
-
-
-
-        raycast.SetActive(canShot);
-        //image.fillAmount = load / loadMax;
-
-
-
+        if (locked == false)
+        {
+            canShot = ControlGachette();
+            raycast.SetActive(canShot);
+        }
     }
 
     private bool ControlGachette()
@@ -85,7 +57,6 @@ public class GunController : MonoBehaviour
         {
             gachettePressed = false;
         }
-
         return gachettePressed;
     }
 }
