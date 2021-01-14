@@ -15,15 +15,18 @@ public class GhostMassControler : MonoBehaviour
     public float mass = 0;
     SphereManipulator sphere;
 
+    public static int Multiplier = 1;
+
     void Awake()
     {
+        Multiplier = 1;
         sphere = GetComponent<SphereManipulator>();
     }
 
     void Update()
     {
         distance = Vector3.Distance(lamp.position, transform.position);
-        mass = Mathf.Lerp(nearMass, farMass, distance / distanceMax);
+        mass = Mathf.Lerp(nearMass, farMass, distance / distanceMax) * Multiplier;
         sphere.godObjectMass = mass;
 
         if (distance < 1)

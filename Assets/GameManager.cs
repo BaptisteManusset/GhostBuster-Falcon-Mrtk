@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
         {
             time += Time.deltaTime;
 
-            clockText.text = Mathf.Round(time / 60) + ":" + (60 - Mathf.Round(time % 60));
+            clockText.text = 60 - Mathf.Ceil(time % 60) + "";
             clock.transform.Rotate(0, 0, Time.deltaTime / duration * 360);
             if (time >= duration)
             {

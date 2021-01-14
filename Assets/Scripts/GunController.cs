@@ -23,20 +23,23 @@ public class GunController : MonoBehaviour
     public bool locked = true;
     public float delay = 1;
 
+    public static bool canGrab = false;
+
 
 
 
     private void Awake()
     {
         trackedObj = GetComponent<SteamVR_Behaviour_Pose>();
-
         Invoke("Unlock", delay);
-
+        canGrab = false;
     }
 
     void Unlock()
     {
+        Debug.Log("CAN GRAB");
         locked = false;
+        canGrab = true;
     }
 
     private void FixedUpdate()

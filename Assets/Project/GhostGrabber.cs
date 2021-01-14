@@ -18,28 +18,41 @@ public class GhostGrabber : MonoBehaviour
         timeBeforeGrab = timeBeforeGrabMax;
         canvas.alpha = 0;
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("Ghost"))
+        {
+            GhostMassControler.Multiplier = 5;
+        }
+    }
+
+
     private void OnTriggerStay(Collider collider)
     {
-
-
-        if (timeBeforeGrab >= 0)
+        if (GunController.canGrab)
         {
-            if (collider.CompareTag("Ghost"))
+            if (timeBeforeGrab >= 0)
             {
-                timeBeforeGrab -= Time.deltaTime * 10;
-                canvas.alpha = 1 - timeBeforeGrab / timeBeforeGrabMax;
-                if (timeBeforeGrab <= 0) timerEnded();
+                if (collider.CompareTag("Ghost"))
+                {
+                    timeBeforeGrab -= Time.deltaTime * 10;
+                    canvas.alpha = 1 - timeBeforeGrab / timeBeforeGrabMax;
+                    if (timeBeforeGrab <= 0) timerEnded();
+                }
             }
         }
     }
     private void OnTriggerExit(Collider collider)
     {
+
         if (collider.CompareTag("Ghost"))
         {
             timeBeforeGrab = timeBeforeGrabMax;
             canvas.alpha = 0;
 
-            GameManager.instance.AddScore(scoreDecrease) ;
+            GameManager.instance.AddScore(scoreDecrease);
+            GhostMassControler.Multiplier = 1;
         }
     }
 
@@ -52,6 +65,5 @@ public class GhostGrabber : MonoBehaviour
         if (GameManager.instance.isStart)
             GameManager.GhostGameOver();
     }
-
 
 }
