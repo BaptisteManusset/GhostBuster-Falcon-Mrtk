@@ -40,7 +40,7 @@ public class CalibrationPlacement : MonoBehaviour
 
     [Space(30)]
     [Header("Fin")]
-    public bool enabletestNextStep = false;
+    //public bool enabletestNextStep = false;
     [SerializeField] bool falconReady = false;
     [SerializeField] bool vrReady = false;
     public UnityEvent fin;
@@ -89,7 +89,7 @@ public class CalibrationPlacement : MonoBehaviour
             {
                 rend.material = bad;
                 CalibrationIsOk = false;
-                enabletestNextStep = true;
+                //enabletestNextStep = true;
             }
         }
 
@@ -101,10 +101,18 @@ public class CalibrationPlacement : MonoBehaviour
 
         if (falconReady && !vrReady) consigne.text = attenteJoueurVr;
 
-        if (falconReady && vrReady) Invoke("ThisIsTheEnd", 3);
+        if (falconReady && vrReady) StartCoroutine("NtmLegroupe");
 
     }
 
+
+
+    IEnumerator NtmLegroupe() {
+
+        yield return new WaitForSeconds(3);
+        Debug.Log("prout");
+        fin.Invoke();
+    }
 
     private void CalibrationReussie()
     {

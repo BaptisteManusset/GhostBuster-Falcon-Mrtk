@@ -13,13 +13,20 @@ public class Spawner : MonoBehaviour
 	public Vector3 center;
 	public Vector3 size;
 
+	public static Spawner instance;
+
+	void Awake()
+    {
+		instance = this;
+
+	}
+
 	// Launch at the beginning
 	void Start () 
 	{
 		SpawnPoints();
 	}
 
-	// Launch th respawn of the prefab
 	void Update()
     {
 		if (Input.GetKeyDown(KeyCode.Space))

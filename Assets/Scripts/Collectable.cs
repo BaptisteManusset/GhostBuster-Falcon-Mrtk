@@ -9,8 +9,17 @@ public class Collectable : MonoBehaviour
     {
         if (other.CompareTag("Ghost"))
         {
-            GameManager.instance.AddScore(100);
-            Destroy(gameObject);
+            Collect();
         }
+    }
+
+    [ContextMenu("collect")]
+    private void Collect()
+    {
+        Debug.Log("collectaaaaaaaaaaaaaaaaaaaanleeeeeeeeeeeeeeeeeeeeeeee");
+
+        GameManager.instance.AddScore(100);
+        if (Spawner.instance) Spawner.instance.SpawnPoints();
+        Destroy(gameObject);
     }
 }

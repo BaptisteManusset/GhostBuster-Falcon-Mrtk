@@ -157,7 +157,7 @@ public class SphereManipulator : MonoBehaviour
         switch (i)
         {
             case 0:
-                if (CalibrationPlacement.instance) if (CalibrationPlacement.instance.enabletestNextStep) CalibrationPlacement.instance.FalconValidate();
+                if (CalibrationPlacement.instance) CalibrationPlacement.instance.FalconValidate();
                 break;
             case 1:
 
