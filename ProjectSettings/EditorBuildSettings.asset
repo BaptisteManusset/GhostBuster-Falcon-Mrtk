@@ -6,8 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Salle.unity
+    path: Assets/Scenes/Salle.unity
     guid: f2248a00f5e30074ebfc2adffb444fd1
-  - enabled: 1
-    path: Assets/reload.unity
-    guid: 4b37783c481a3434499b7320fb57c363
