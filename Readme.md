@@ -8,6 +8,10 @@
 
 Projet fait par Justine Bertrand, Mathilde Beuvin, Nicolas Frenot, Baptiste Manusset, Maxence Rouillet
 
+Vidéo de présentation:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R9slg06K7o0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Utilisation / Installation
 
