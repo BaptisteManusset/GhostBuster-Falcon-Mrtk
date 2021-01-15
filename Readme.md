@@ -10,8 +10,7 @@ Projet fait par Justine Bertrand, Mathilde Beuvin, Nicolas Frenot, Baptiste Manu
 
 Vidéo de présentation:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/R9slg06K7o0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+[![trailer de la vidéo](http://img.youtube.com/vi/R9slg06K7o0/0.jpg)](http://www.youtube.com/watch?v=R9slg06K7o0)
 
 ## Utilisation / Installation
 
